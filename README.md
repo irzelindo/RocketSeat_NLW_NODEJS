@@ -36,4 +36,11 @@
    - Não é permitido registar TAG sem nome;
    - Não é permitido registar mais de uma TAG com o mesmo email;
    - Não é permitido registar TAG sem ser administrador;
-   
+
+## Fluxo 
+
+- SERVICE -> CONTROLLER -> SERVICE -> REPOSITORIES -> DATABASE 
+
+### Ordem
+
+- DATABASE ---> ENTITY ---> REPOSITORY ---> SERVICE ---> CONTROLLER --> ROUTES
