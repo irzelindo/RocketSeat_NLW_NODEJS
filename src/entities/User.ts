@@ -13,7 +13,7 @@ class User {
     email: string;
 
     @Column()
-    admin: boolean;
+    admin?: boolean;
 
     @CreateDateColumn()
     created_at: Date;
