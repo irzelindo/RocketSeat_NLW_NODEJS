@@ -66,7 +66,8 @@ app.listen(
     } path to create migrations folder on ormconfig.json
  * Add <"typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"> to package.json to run
  * CLI commands on typeorm
- * To create migrations run <yarn typeorm migration:create -n CreateUsers>
+ * To create migrations run < yarn typeorm migration:create -n CreateUsers >
+ * < yarn typeorm migration:create -n CreateTags >
  * After editing the migration file add "migrations": [
         "src/database/migrations/*.ts"
     ], to ormconfig.json file to indicate where to run migrations from and finally can execute migrations using the command
