@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express, {Request, Response, NextFunction} from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import "express-async-errors"
 import './database';
 import { router } from "./routes"
@@ -16,12 +16,12 @@ app.use(express.json()); // json parse middleware
 app.use(router); // routes middleware
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
-   if(err instanceof Error){
-       return response.status(400).json({
+    if (err instanceof Error) {
+        return response.status(400).json({
             status: "400",
-            error: err.message     
-       });
-   }
+            error: err.message
+        });
+    }
 
     return response.status(500).json({
         status: "500",
@@ -50,7 +50,7 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
 
 // http://localhost:3000
 app.listen(
-    port, 
+    port,
     () => console.log(`Server is Runnning on port ${port}`)
 );
 
@@ -72,6 +72,6 @@ app.listen(
         "src/database/migrations/*.ts"
     ], to ormconfig.json file to indicate where to run migrations from and finally can execute migrations using the command
     <yarn typeorm migration:run> on CLI. To revert just run <yarn typeorm migration:revert>
- * */ 
+ * */
 
- 
+
