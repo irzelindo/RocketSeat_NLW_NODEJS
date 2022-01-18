@@ -21,7 +21,7 @@ class CreateUserService {
         });
 
         if(userAlreadyExists){
-            throw new Error('User Already Exists');
+            throw new Error(`User ${name} Already Exists`);
         }
 
         const user = usersRepository.create({
