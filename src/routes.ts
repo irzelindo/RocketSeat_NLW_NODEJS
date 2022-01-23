@@ -15,6 +15,6 @@ const authenticateUserController = new AuthenticateUserController(); // Instance
 router.use(ensureAdmin) // middleware for authentication and authorization privileges
 router.post("/tags", ensureAdmin, createTagConroller.handle);
 router.post("/users", createUserController.handle);
-router.post("/sessions", authenticateUserController.handle);
+router.post("/login", authenticateUserController.handle);
 
 export { router };
