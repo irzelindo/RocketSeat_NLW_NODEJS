@@ -32,7 +32,7 @@ class AuthenticateUserService {
 
         // Generate Token
         const token = sign({
-            email: user.email
+            email: user.email,
         },
             "49c254f84c97ba3285f6a2112fdec073", {
             subject: user.id,
