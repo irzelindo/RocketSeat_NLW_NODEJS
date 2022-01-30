@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateTagService } from "../services/createTagService";
+import { CreateTagService } from "../services/CreateTagService";
 
 /**
  * Controller comunicates with the Service to handle de repositories functions
